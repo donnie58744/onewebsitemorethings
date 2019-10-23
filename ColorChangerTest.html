@@ -1,0 +1,33 @@
+<html>
+
+<body>
+<div id="body" class="body">
+    Choose your theme
+    <br>
+<button id="White"><font size="7">White</font></button>
+<button id="Black"><font size="7">Black</font></button>
+</div>
+</body>
+
+<style>
+    .body{
+     width: 1500px;
+    height: 1000px;
+    background-color: white;
+    }
+</style>
+
+<script>
+var White = document.getElementById("White");
+var Black = document.getElementById("Black");
+
+White.onclick = function(){
+    body.style.backgroundColor = "White";
+}
+
+Black.onclick = function(){
+    body.style.backgroundColor = "Black";
+}
+</script>
+
+</html>

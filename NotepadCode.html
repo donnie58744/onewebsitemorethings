@@ -1,0 +1,60 @@
+<html>
+
+<body onload="AutoLoad()"></body>
+
+<script type="text/javascript" src="js/Home.js"></script>
+
+<script>
+    function AutoLoad() {
+        load = localStorage.getItem("Note")
+        document.getElementById("text").value = load;
+    }
+
+    setInterval(
+        function AutoSave() {
+            localStorage.setItem("Note", text.value);
+        }, 1);
+
+    function Save() {
+        localStorage.setItem("Note", text.value);
+    }
+</script>
+
+<style>
+    .textbox {
+        background-color: lightgray;
+        width: 1300px;
+        height: 1300px;
+        border: 25px solid black;
+        padding: 25px;
+        margin: 25px;
+    }
+
+    .divider {
+        height: 80px;
+        display: inline-block;
+    }
+</style>
+
+<body>
+    <center>
+        <div class="textbox">
+            <button style="background-color:white; float:left;" onclick="Home()">
+                <font size="7">Back</font>
+            </button>
+            <button id="White" style="float:right; background-color:white;">
+                <font size="5">White</font>
+            </button>
+            <button id="Black" style="float:right; background-color:white;">
+                <font size="5">Black</font>
+            </button>
+            <button style="background-color:white;" onclick="Save()">
+                <font size="7">Save</font>
+            </button>
+            <div class="divider"></div>
+            <textarea id="text" style="width:1300px; height:1210px; font-size:40px" placeholder="Type Here" rows="4" cols="50"></textarea>
+        </div>
+    </center>
+    </body>
+</html>
+

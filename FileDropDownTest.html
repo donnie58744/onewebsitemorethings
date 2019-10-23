@@ -1,0 +1,53 @@
+<html>
+
+<select id="FileMenu" onchange="FileDropDownVal()">
+    <option disabled selected value="File">File</option>
+    <option value="Download">Download</option>
+    <option value="Delete">Delete</option>
+</select>
+
+<input type="text" id="FileNameInputer">
+
+<textarea id="text"></textarea>
+
+<button onclick="saveTextAsFile()">Download</button>
+
+<script>
+    function FileDropDownVal() {
+
+        var FileMenu = document.getElementById("FileMenu")
+        
+        if (FileMenu.value == "Download") {
+            var FileNameInput = document.getElementById("FileNameInputer").value
+            var textToWrite = document.getElementById("text").value
+            var textFileAsBlob = new Blob([textToWrite], {
+                type: 'text/plain'
+            });
+            var fileNameToSaveAs = FileNameInput
+
+            var downloadLink = document.createElement("a");
+            downloadLink.download = fileNameToSaveAs;
+            downloadLink.innerHTML = "Download File";
+
+            if (window.URL != null) {
+                downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+            } else {
+                downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+                downloadLink.onclick = destroyClickedElement;
+                downloadLink.style.display = "none";
+                document.body.appendChild(downloadLink);
+            }
+
+            downloadLink.click();
+            
+            FileMenu.value = "File"
+        } 
+        
+        else if (FileMenu.value == "Delete") {
+            alert("Deleted")
+            FileMenu.value = "File"
+        }
+    }
+</script>
+
+</html>

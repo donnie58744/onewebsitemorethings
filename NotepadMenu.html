@@ -1,0 +1,464 @@
+<html>
+
+<body onload="LoadTheme(); LoadFontSize(); LoadFontColor();">
+
+    <head id="css">
+        <link rel="stylesheet" href="Notepad.css">
+    </head>
+
+    <center>
+        <div id="textboxcolor" class="textbox">
+
+            <div class="ToolSpliter"></div>
+
+            <div id="Tools" class="Tools">
+
+                <div class="split2" style="float: left;"></div>
+
+                <select id="Themes" onchange="getSelectTheme(); getSelectFontColor();" style="float:left; font-size:20px">
+                    <option value="Title">Themes</option>
+                    <option value="BlackTheme">Black</option>
+                    <option value="WhiteTheme">White</option>
+                    <option value="BlueTheme">Blue</option>
+                    <option value="GreenTheme">Green</option>
+                </select>
+
+                <div class="split" style="float: left;"></div>
+
+                <select id="FontColor" name="FontColors" onchange="getSelectFontColor();" style="float:left; font-size:20px">
+                    <option value="Title">Text Colors</option>
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Green">Green</option>
+                    <option value="Orange">Orange</option>
+                    <option value="White">White</option>
+                    <option value="Gray">Gray</option>
+                </select>
+
+                <div class="split" style="float: left;"></div>
+
+                <select style="float:left; font-size:20px" id="FontSizes" onchange="getSelectFS()">
+                    <option value="FontSizeNone"></option>
+                    <option value="FontSize20">20</option>
+                    <option value="FontSize30">30</option>
+                    <option value="FontSize40">40</option>
+                    <option value="FontSize50">50</option>
+                    <option value="FontSize60">60</option>
+                    <option value="FontSize70">70</option>
+                    <option value="FontSize80">80</option>
+                    <option value="FontSize100">100</option>
+                </select>
+                
+                <div class="split" style="float: left"></div>
+                
+                <button style="background-color:white; float:left;" onclick="RandomColor();">
+                <font size="4">Random Color</font>
+            </button>
+
+            </div>
+
+            <div id="SplitTools" class="SplitTools"></div>
+            
+            <div class="BadTimes" style="float: left"></div>
+
+            <div id="Tools2" class="Tools2">
+
+                <input style="float: left; height: 28px; font-size: 20px" type="text" id="FileNameInputer" placeholder="File Name" onchange="SetTextFileName()">
+
+                <div class="GoodTimes" style="float: left"></div>
+
+                <select id="FileMenu" onchange="FileDropDownVal()" style="float: left">
+                    <option disabled selected value="File">File</option>
+                    <option value="Download">Download</option>
+                    <option value="Save">Save</option>
+                    <option value="Load">Load</option>
+                    <option value="Delete">Delete</option>
+                </select>
+
+                <div class="GoodTimes" style="float: left"></div>
+
+                <input style="float: left; background-color: white; width: 180px" type="file" id="openFile" onclick="FileTextReader()" />
+            </div>
+
+            <br>
+
+            <button id="Check" onclick="getSelectFont()" style="display:none;"></button>
+
+            <div class="divider"></div>
+
+            <textarea id="text" style="width:1300px; height:1070px; font-size:40px; color:" placeholder="Type Here" rows="4" cols="50" onchange="Save(); SetTextFileName()"></textarea>
+        </div>
+    </center>
+</body>
+
+<head id="Alerts">
+</head>
+
+<script>
+    function FileTextReader() {
+        document.getElementById("openFile").addEventListener("change", function() {
+            var fr = new FileReader();
+            fr.onload = function() {
+                document.getElementById("text").textContent = this.result;
+            }
+            fr.readAsText(this.files[0]);
+        })
+    }
+
+</script>
+
+<head id="SetTextFileName">
+    <script>
+        function SetTextFileName() {
+            var FileNameInput = document.getElementById("FileNameInputer").value
+
+            localStorage.setItem("FileName", FileNameInput)
+        }
+
+        function LoadTextFileName() {
+            var GetFileName = localStorage.getItem("FileName")
+
+            document.getElementById("FileNameInputer").value = GetFileName
+        }
+
+    </script>
+</head>
+
+<head id="FontSize">
+    <script>
+        function getSelectFS() {
+            var selectedSize = document.getElementById("FontSizes").value
+
+            if (selectedSize == "FSNONE") {
+                console.log("NONE")
+                localStorage.setItem("FSP", selectedSize)
+            } else if (selectedSize == "FontSize20") {
+                text.style.fontSize = 20;
+                localStorage.setItem("FontSizePicked", selectedSize)
+            } else if (selectedSize == "FontSize30") {
+                text.style.fontSize = 30;
+                localStorage.setItem("FontSizePicked", selectedSize)
+            } else if (selectedSize == "FontSize40") {
+                text.style.fontSize = 40;
+                localStorage.setItem("FontSizePicked", selectedSize)
+            } else if (selectedSize == "FontSize50") {
+                text.style.fontSize = 50;
+                localStorage.setItem("FontSizePicked", selectedSize)
+            } else if (selectedSize == "FontSize60") {
+                text.style.fontSize = 60;
+                localStorage.setItem("FontSizePicked", selectedSize)
+            } else if (selectedSize == "FontSize70") {
+                text.style.fontSize = 70;
+                localStorage.setItem("FontSizePicked", selectedSize)
+            } else if (selectedSize == "FontSize80") {
+                text.style.fontSize = 80;
+                localStorage.setItem("FontSizePicked", selectedSize)
+            } else if (selectedSize == "FontSize100") {
+                text.style.fontSize = 100;
+                localStorage.setItem("FontSizePicked", selectedSize)
+            } else if (localStorage.getItem("FontSizePicked") == "FontSize20") {
+                text.style.fontSize = 20;
+            } else if (localStorage.getItem("FontSizePicked") == "FontSize30") {
+                text.style.fontSize = 30;
+            } else if (localStorage.getItem("FontSizePicked") == "FontSize40") {
+                text.style.fontSize = 40;
+            } else if (localStorage.getItem("FontSizePicked") == "FontSize50") {
+                text.style.fontSize = 50;
+            } else if (localStorage.getItem("FontSizePicked") == "FontSize60") {
+                text.style.fontSize = 60;
+            } else if (localStorage.getItem("FontSizePicked") == "FontSize60") {
+                text.style.fontSize = 60;
+            } else if (localStorage.getItem("FontSizePicked") == "FontSize70") {
+                text.style.fontSize = 70;
+            } else if (localStorage.getItem("FontSizePicked") == "FontSize80") {
+                text.style.fontSize = 80;
+            } else if (localStorage.getItem("FontSizePicked") == "FontSize100") {
+                text.style.fontSize = 100;
+            }
+        }
+
+        getSelectFS();
+
+        function LoadFontSize() {
+            LoadFontSizeType = localStorage.getItem("FontSizePicked");
+            document.getElementById("FontSizes").value = LoadFontSizeType;
+        }
+
+    </script>
+</head>
+
+<head id="ThemePicker">
+    <script>
+        function getSelectTheme() {
+            var selectedTheme = document.getElementById("Themes").value;
+            var ToolBoxColor = document.getElementById("Tools").style.backgroundColor;
+
+            if (selectedTheme == "BlackTheme") {
+                text.style.backgroundColor = "black";
+                text.style.color = "gray";
+                document.body.style.backgroundColor = "black";
+                document.getElementById("textboxcolor").style.backgroundColor = "darkgray";
+                document.getElementById("Tools").style.backgroundColor = "darkgray";
+                document.getElementById("SplitTools").style.backgroundColor = "darkgray";
+                document.getElementById("Tools2").style.backgroundColor = "darkgray";
+                localStorage.setItem("Theme", selectedTheme);
+            } else if (selectedTheme == "WhiteTheme") {
+                text.style.backgroundColor = "white";
+                text.style.color = "black";
+                document.body.style.backgroundColor = "white";
+                document.getElementById("textboxcolor").style.backgroundColor = "lightgray";
+                document.getElementById("Tools").style.backgroundColor = "lightgray";
+                document.getElementById("SplitTools").style.backgroundColor = "lightgray";
+                document.getElementById("Tools2").style.backgroundColor = "lightgray";
+                localStorage.setItem("Theme", selectedTheme);
+            } else if (selectedTheme == "BlueTheme") {
+                text.style.backgroundColor = "blue";
+                text.style.color = "black";
+                document.body.style.backgroundColor = "blue";
+                document.getElementById("textboxcolor").style.backgroundColor = "yellow";
+                document.getElementById("Tools").style.backgroundColor = "yellow";
+                document.getElementById("SplitTools").style.backgroundColor = "yellow";
+                document.getElementById("Tools2").style.backgroundColor = "yellow";
+                localStorage.setItem("Theme", selectedTheme);
+            } else if (selectedTheme == "GreenTheme") {
+                text.style.backgroundColor = "#12ed92";
+                text.style.color = "black";
+                document.body.style.backgroundColor = "#12ed92";
+                document.getElementById("textboxcolor").style.backgroundColor = "#2a35cc";
+                document.getElementById("Tools").style.backgroundColor = "#2a35cc";
+                document.getElementById("SplitTools").style.backgroundColor = "#2a35cc";
+                document.getElementById("Tools2").style.backgroundColor = "#2a35cc";
+                localStorage.setItem("Theme", selectedTheme);
+            } else if (localStorage.getItem("Theme") == "BlackTheme") {
+                text.style.backgroundColor = "black"
+                text.style.color = "gray"
+                document.body.style.backgroundColor = "black"
+                document.getElementById("textboxcolor").style.backgroundColor = "darkgray"
+            } else if (localStorage.getItem("Theme") == "WhiteTheme") {
+                text.style.backgroundColor = "white";
+                text.style.color = "black";
+                document.body.style.backgroundColor = "white"
+                document.getElementById("textboxcolor").style.backgroundColor = "lightgray"
+            } else if (localStorage.getItem("Theme") == "BlueTheme") {
+                text.style.backgroundColor = "blue";
+                text.style.color = "black";
+                document.body.style.backgroundColor = "blue"
+                document.getElementById("textboxcolor").style.backgroundColor = "yellow"
+            } else if (localStorage.getItem("Theme") == "GreenTheme") {
+                text.style.backgroundColor = "12ed92";
+                text.style.color = "black";
+                document.body.style.backgroundColor = "12ed92"
+                document.getElementById("textboxcolor").style.backgroundColor = "2a35cc"
+            }
+
+
+        }
+        getSelectTheme();
+
+        function LoadTheme() {
+            LoadThemeType = localStorage.getItem("Theme");
+            document.getElementById("Themes").value = LoadThemeType;
+        }
+
+    </script>
+</head>
+
+<head id="TextColorPicker">
+    <script>
+        function getSelectFontColor() {
+            var selectedValue = document.getElementById("FontColor").value;
+            var TextColor = document.getElementById("text");
+            var Saved = localStorage.getItem("TextColorSaved");
+
+            if (selectedValue == "Black") {
+                TextColor.style.color = "black"
+                localStorage.setItem("TextColorSaved", selectedValue)
+            } else if (selectedValue == "Red") {
+                TextColor.style.color = "red"
+                localStorage.setItem("TextColorSaved", selectedValue)
+            } else if (selectedValue == "Blue") {
+                TextColor.style.color = "blue"
+                localStorage.setItem("TextColorSaved", selectedValue)
+            } else if (selectedValue == "Yellow") {
+                TextColor.style.color = "yellow"
+                localStorage.setItem("TextColorSaved", selectedValue)
+            } else if (selectedValue == "Purple") {
+                TextColor.style.color = "purple"
+                localStorage.setItem("TextColorSaved", selectedValue)
+            } else if (selectedValue == "Green") {
+                TextColor.style.color = "green"
+                localStorage.setItem("TextColorSaved", selectedValue)
+            } else if (selectedValue == "Orange") {
+                TextColor.style.color = "orange"
+                localStorage.setItem("TextColorSaved", selectedValue)
+            } else if (selectedValue == "White") {
+                TextColor.style.color = "white"
+                localStorage.setItem("TextColorSaved", selectedValue)
+            } else if (selectedValue == "Gray") {
+                TextColor.style.color = "gray"
+                localStorage.setItem("TextColorSaved", selectedValue)
+            } else if (Saved == "Black") {
+                TextColor.style.color = "black"
+            } else if (Saved == "Red") {
+                TextColor.style.color = "red"
+            } else if (Saved == "Blue") {
+                TextColor.style.color = "blue"
+            } else if (Saved == "Yellow") {
+                TextColor.style.color = "yellow"
+            } else if (Saved == "Purple") {
+                TextColor.style.color = "purple"
+            } else if (Saved == "Green") {
+                TextColor.style.color = "green"
+            } else if (Saved == "Orange") {
+                TextColor.style.color = "orange"
+            } else if (Saved == "White") {
+                TextColor.style.color = "White"
+            } else if (Saved == "Gray") {
+                TextColor.style.color = "gray"
+            }
+
+        }
+        getSelectFontColor();
+
+
+        function LoadFontColor() {
+            LoadFontColorType = localStorage.getItem("TextColorSaved");
+            document.getElementById("FontColor").value = LoadFontColorType;
+        }
+
+    </script>
+</head>
+
+<head id="Varibles">
+    <script>
+        var TextColor = document.getElementById("text");
+        var TextFont = document.getElementById("text");
+
+    </script>
+</head>
+
+<head id="RandomColor">
+    <script>
+        function RandomColor() {
+            var randomNumber = Math.floor(Math.random() * 11);
+
+            if (randomNumber == 1) {
+                TextColor.style.color = "white"
+            } else if (randomNumber == 2) {
+                TextColor.style.color = "black"
+            } else if (randomNumber == 3) {
+                TextColor.style.color = "blue"
+            } else if (randomNumber == 4) {
+                TextColor.style.color = "orange"
+            } else if (randomNumber == 5) {
+                TextColor.style.color = "pink"
+            } else if (randomNumber == 6) {
+                TextColor.style.color = "green"
+            } else if (randomNumber == 7) {
+                TextColor.style.color = "aqua"
+            } else if (randomNumber == 8) {
+                TextColor.style.color = "purple"
+            } else if (randomNumber == 9) {
+                TextColor.style.color = "yellow"
+            } else if (randomNumber == 10) {
+                TextColor.style.color = "red"
+            }
+        }
+
+    </script>
+</head>
+
+<head id="DownloadTextFile">
+    <script>
+        function saveTextAsFile() {
+            var FileNameInput = document.getElementById("FileNameInputer").value
+            var textToWrite = document.getElementById("text").value
+            var textFileAsBlob = new Blob([textToWrite], {
+                type: 'text/plain'
+            });
+            var fileNameToSaveAs = FileNameInput
+
+            var downloadLink = document.createElement("a");
+            downloadLink.download = fileNameToSaveAs;
+            downloadLink.innerHTML = "Download File";
+
+            if (window.webkitURL != null) {
+                downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+            } else {
+                downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+                downloadLink.onclick = destroyClickedElement;
+                downloadLink.style.display = "none";
+                document.body.appendChild(downloadLink);
+            }
+
+            downloadLink.click();
+        }
+
+    </script>
+</head>
+    
+<script>
+    function FileDropDownVal() {
+
+        var FileMenu = document.getElementById("FileMenu")
+        
+        if (FileMenu.value == "Download") {
+            
+            if (document.getElementById("FileNameInputer").value == "") {
+                alert("Please enter a file name")
+                
+            }
+            
+            var FileNameInput = document.getElementById("FileNameInputer").value
+            var textToWrite = document.getElementById("text").value
+            var textFileAsBlob = new Blob([textToWrite], {
+                type: 'text/plain'
+            });
+            var fileNameToSaveAs = FileNameInput
+
+            var downloadLink = document.createElement("a");
+            downloadLink.download = fileNameToSaveAs;
+            downloadLink.innerHTML = "Download File";
+
+            if (window.URL != null) {
+                downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+            } else {
+                downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+                downloadLink.onclick = destroyClickedElement;
+                downloadLink.style.display = "none";
+                document.body.appendChild(downloadLink);
+            }
+
+            downloadLink.click();
+            
+            FileMenu.value = "File"
+        } 
+        
+        else if (FileMenu.value == "Delete") {
+            localStorage.removeItem("Note")
+            localStorage.removeItem("FileName")
+            alert("Hey you have to refresh the page for this action to take effect")
+            FileMenu.value = "File"
+        }
+        
+        else if (FileMenu.value == "Save") {
+            var FileNameInput = document.getElementById("FileNameInputer").value
+            localStorage.setItem("Note", text.value);
+            localStorage.setItem("FileName", FileNameInput)
+            FileMenu.value = "File"
+        }
+        
+        else if (FileMenu.value == "Load") {
+            load = localStorage.getItem("Note");
+            document.getElementById("text").value = load;
+            var GetFileName = localStorage.getItem("FileName")
+            document.getElementById("FileNameInputer").value = GetFileName
+            FileMenu.value = "File"
+        }
+    }
+</script>
+
+</html>

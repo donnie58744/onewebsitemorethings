@@ -1,0 +1,23 @@
+<input id="CustomSize" value="40" style="float:right; width:50px; font-size: 20px">
+
+<head id="CustomFontPicker">
+    <script>
+        var input = document.getElementById("CustomSize");
+        input.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("Check").click();
+            }
+        });
+
+        function getSelectFont() {
+            var selectedFont = document.getElementById("CustomSize").value;
+
+            if (selectedFont = selectedFont) {
+                text.style.fontSize = selectedFont;
+            }
+        }
+
+        getSelectFont();
+    </script>
+</head>

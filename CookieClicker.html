@@ -1,0 +1,73 @@
+<html>
+
+<script src="CookieClicker/Update.js"></script>
+<script src="CookieClicker/Timer.js"></script>
+<script src="CookieClicker/AddCookie.js"></script>
+<script src="CookieClicker/Save.js"></script>
+<script src="CookieClicker/Load.js"></script>
+<script src="CookieClicker/BuyAutoClick.js"></script>
+<script src="js/Home.js"></script>
+
+<script>
+
+    var CookieCount = 0;
+		var AutoClick = 0;
+
+		setInterval(Timer, 1000)
+
+	</script>
+
+<center>
+    <button style="background-color:white;"><a href="#" onclick="AddCookie()"><img src="CookieClicker/Cookie.png" width="150" height="150"></a></button>
+</center>
+
+<br></br>
+
+<center>
+    <button style="background-color:white;"><a href="#" onclick="BuyAutoClick()"><img src="CookieClicker/AutoClick.jpeg" width="150" height="150"></a></button>
+</center>
+
+<center>
+    <p id="CostAutoClick">Auto Clickers Cost 12 Cookies</p>
+    <p id="AmmountAutoClick">You own 0 auto clickers</p>
+</center>
+
+<br></br>
+
+<center>
+    You have:
+    <input type="text" id="text" disabled style="text-align: center;">
+    Cookies
+</center>
+
+<br></br>
+
+<center>
+    <button style="background-color:white;" onclick="Save()">
+        <font size=7>Save</font>
+    </button>
+    <button style="background-color:white;" onclick="Load()">
+        <font size=7>Load</font>
+    </button>
+    <button style="background-color:white;" onclick="Reset()">
+        <font size=7>Reset</font>
+    </button>
+    <br></br>
+    <button style="background-color:white;" onclick="Home()">
+        <font size=7>Home</font>
+    </button>
+</center>
+
+
+<body>
+
+    <script>
+        function Reset() {
+
+        }
+
+    </script>
+
+</body>
+
+</html>

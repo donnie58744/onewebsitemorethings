@@ -1,0 +1,38 @@
+<html>
+
+<body bgcolor="#4ffffc">
+
+    <script type="text/javascript" src="MathJs/MathTutorMenu.js"></script>
+
+    <button style="background-color:white;" onclick="MathTutorMenu()">
+        <font size="6">Tutor Menu</font>
+    </button>
+
+    <br>
+    <br>
+
+    <center>
+
+        <label>
+            <font size="7"></font>
+        </label>
+        <input id="Problem" style="width:90px; height:50px; font-size:45" type="text"></input>
+        <button style="background-color:white;" onclick="CheckMath()">
+            <font size="7">Check</font>
+        </button>
+    </center>
+
+    <script>
+        function CheckMath() {
+            var Problem = document.getElementById('Problem').value
+
+            if (Problem == "") {
+                window.location.href = "CorrectScreenDiv5.html"
+            } else {
+                alert("Your Wrong Try Again")
+            }
+        }
+
+    </script>
+
+</html

@@ -1,0 +1,36 @@
+<html>
+
+<body bgcolor="#3fff56">
+
+    <script type="text/javascript" src="MathJs/MathTutorMenu.js"></script>
+
+    <button style="background-color:white;" onclick="MathTutorMenu()">
+        <font size="6">Tutor Menu</font>
+    </button>
+
+    <br></br>
+
+    <center>
+        <label>
+            <font size="7">85-65=</font>
+        </label>
+        <input style="width:90px; height:50px; font-size:45" type="text" id="Problem">
+        <button style="background-color:white;" onclick="CheckMath()">
+            <font size="7">Check</font>
+        </button>
+    </center>
+
+    <script>
+        function CheckMath() {
+            var Problem = document.getElementById('Problem').value
+
+            if (Problem == "20") {
+                window.location.href = "CorrectScreenSub3.html"
+            } else {
+                alert("Your Wrong Try Again")
+            }
+        }
+
+    </script>
+
+</html>

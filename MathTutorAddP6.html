@@ -1,0 +1,39 @@
+<html>
+
+<body bgcolor="#2dffc3">
+
+    <script type="text/javascript" src="MathJs/Math.js"></script>
+    <script type="text/javascript" src="MathJs/MathTutorMenu.js"></script>
+
+    <button style="background-color:white;" onclick="MathTutorMenu()">
+        <font size="6">Tutor Menu</font>
+    </button>
+
+    <br></br>
+
+    <center>
+
+        <label>
+            <font size="7">50+52=</font>
+        </label>
+
+        <input style="width:90px; height:50px; font-size:45" type="text" name="Problem" id="Problem">
+
+        <button style="background-color:white;" onclick="CheckMath()">
+            <font size="6">Check</font>
+        </button>
+
+        <script>
+            function CheckMath() {
+                if (Problem.value == "102") {
+                    window.location.href = "CorrectScreenAdd6.html"
+                } else {
+                    alert("Your Wrong Try Again")
+                }
+            }
+
+        </script>
+
+    </center>
+
+</html>

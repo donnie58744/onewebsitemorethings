@@ -1,0 +1,214 @@
+<html>
+
+<body onload="Load(); PriceCheck(BurgerTotal,DrinkTotal,COSTotal)"></body>
+<div class="split2" style="float: left"></div>
+<div class="BurgerTitle" style="float: left">Burgers</div>
+<div class="DrinksTitle" style="float: left">Drinks</div>
+<div class="ChickenOrSandwiches" style="float: left">Chicken and Sandwiches</div>
+    <br>
+<select id="Burgers" onchange="Menu();PriceCheck(BurgerTotal,DrinkTotal,COSTotal)">
+    <option selected value="NoBurger">No Hamburger</option>
+    <option value="BaconSmokehouseBurger">Bacon Smokehouse Burger-4$</option>
+    <option value="DoubleBaconSmokehouseBurger">Double Bacon Smokehouse Burger-5$</option>
+    <option value="Cheeseburger">Cheeseburger-1$</option>
+</select>
+
+<div class="split" style=""></div>
+
+<select id="Drinks" onchange="Menu();PriceCheck(BurgerTotal,DrinkTotal,COSTotal)">
+    <option selected value="NoDrink">No Drink</option>
+    <option value="SmallDrink">Small-1$</option>
+    <option value="MediumDrink">Medium-2$</option>
+    <option value="LargeDrink">Large-3$</option>
+</select>
+    
+    <div class="split" style=""></div>
+    
+    <select id="ChickenOrSandwich" onchange="Menu();PriceCheck(BurgerTotal,DrinkTotal,COSTotal)">
+        <option selected value="NoChickenOrSandwiches">No Chicken Or Sandwiches</option>
+        <option value="BSBCC">Bacon Smokehouse Buttermilk Crispy Chicken-6$</option>
+        <option value="BSAGC">Bacon Smokehouse Artisan Grilled Chicken-7$</option>
+        <option value="4PieceChickenMcNuggets">4 piece Chicken McNuggets-5$</option>
+        <option value="ButtermilkCrispyTenders">Buttermilk Crispy Tenders-6$</option>
+        <option value="ClassicChickenSandwich">Classic Chicken Sandwich-4$</option>
+        <option value="AGCS">Artisan Grilled Chicken Sandwich-5$</option>
+        <option value="BCCS">Buttermilk Crispy Chicken Sandwich-6$</option>
+        <option value="McChicken">McChicken-4$</option>
+        <option value="FiletOFish">Filet-O-Fish-5$</option>
+        <option value="BRSBCC">Bacon Ranch Salad with Buttermilk Crispy Chicken-2$</option>
+        <option value="BRGCS">Bacon Ranch Grilled Chicken Salad-2$</option>
+        <option value="SBCCS">Southwest Buttermilk Crispy Chicken Salad-3$</option>
+        <option value="SNSHBGT">Sweet N' Spicy Honey BBQ Glazed Tenders-5$</option>
+        <option value="McRib">McRib-7$</option>
+    </select>
+        
+    <br>
+    <br>
+    <br>
+    
+    <div class="PriceTitle" style="font-size:40px">Price:</div>
+    
+    <input style="font-size: 40px; width: 85px; background-color: white" disabled id="TotalPrice">
+
+<style>
+    .PriceTitle {
+        display: inline;
+    }
+    
+    .split {
+        height: 1px;
+        width: 40px;
+        display: inline-block;
+    }
+    
+    .Drinks {
+        display:inline;
+        
+    }
+    
+    .BurgerTitle {
+        display: inline-block;
+        width: 165px;
+    }
+    
+    .DrinksTitle {
+        display: inline-block;
+        width: 195px;
+    }
+    
+    .ChickenOrSandwiches {
+         display: inline-block;
+        width: 170px;
+    }
+    
+    .split2 {
+        height: 1px;
+        width: 32px;
+        display: inline; 
+    }
+</style>
+
+<script>
+    function Load() {
+        BurgerTotal = 0;
+        DrinkTotal = 0;
+        COSTotal = 0;
+    }
+
+    var BurgerTotal = 0;
+    var DrinkTotal = 0;
+    var COSTotal = 0;
+
+    function Menu() {
+        var Burgers = document.getElementById("Burgers");
+        var Drinks = document.getElementById("Drinks");
+        var ChickenOrSandwich = document.getElementById("ChickenOrSandwich");
+
+       if (Burgers.value == "NoBurger") {
+            BurgerTotal = 0
+        }
+        
+        else if (Burgers.value == "Cheeseburger") {
+            BurgerTotal = 1
+        } 
+        
+        else if (Burgers.value == "BaconSmokehouseBurger") {
+            BurgerTotal = 4
+        }
+        
+        else if (Burgers.value == "DoubleBaconSmokehouseBurger") {
+            BurgerTotal = 5
+        }
+        
+        if (Drinks.value == "NoDrink") {
+            DrinkTotal = 0
+        }
+        
+        else if (Drinks.value == "SmallDrink") {
+            DrinkTotal = 1
+        }
+        
+        else if (Drinks.value == "MediumDrink") {
+            DrinkTotal = 2
+        }
+        
+        else if (Drinks.value == "LargeDrink") {
+            DrinkTotal = 3
+        }
+        
+        if (ChickenOrSandwich.value == "NoChickenOrSandwiches") {
+            COSTotal = 0
+        }
+        
+       else if (ChickenOrSandwich.value == "BSBCC") {
+            COSTotal = 6
+        }
+        
+        else if (ChickenOrSandwich.value == "BSAGC") {
+            COSTotal = 7
+        }
+        
+        else if (ChickenOrSandwich.value == "4PieceChickenMcNuggets") {
+            COSTotal = 5
+        }
+        
+        else if (ChickenOrSandwich.value == "ButtermilkCrispyTenders") {
+            COSTotal = 6
+        }
+        
+        else if (ChickenOrSandwich.value == "ClassicChickenSandwich") {
+            COSTotal = 4
+        }
+        
+        else if (ChickenOrSandwich.value == "AGCS") {
+            COSTotal = 5
+        }
+        
+        else if (ChickenOrSandwich.value == "BCCS") {
+            COSTotal = 6
+        }
+        
+        else if (ChickenOrSandwich.value == "McChicken") {
+            COSTotal = 4
+        }
+        
+        else if (ChickenOrSandwich.value == "FiletOFish") {
+            COSTotal = 5
+        }
+        
+        else if (ChickenOrSandwich.value == "BRSBCC") {
+            COSTotal = 2
+        }
+        
+        else if (ChickenOrSandwich.value == "BRGCS") {
+            COSTotal = 2
+        }
+        
+        else if (ChickenOrSandwich.value == "SBCCS") {
+            COSTotal = 3
+        }
+        
+        else if (ChickenOrSandwich.value == "SNSHBGT") {
+            COSTotal = 5
+        }
+        
+        else if (ChickenOrSandwich.value == "McRib") {
+            COSTotal = 7
+        }
+        
+        
+        console.log("BurgerTotal",BurgerTotal,"DrinkTotal",DrinkTotal,"COSTotal",COSTotal)
+
+    }
+
+    function PriceCheck(BurgerTotal,DrinkTotal,COSTotal) {
+        console.log("BurgerTotal",BurgerTotal,"DrinkTotal",DrinkTotal,"COSTotal",COSTotal)
+        
+        var TotalTextBox = document.getElementById("TotalPrice")
+        
+        TotalTextBox.value = BurgerTotal + DrinkTotal + COSTotal;
+    }
+
+</script>
+
+</html>

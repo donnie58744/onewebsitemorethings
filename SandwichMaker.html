@@ -1,0 +1,715 @@
+<html>
+<body onload="Load()"></body>    
+    
+<center>
+    <div class="ChickenAndSandwichBox">
+        <div class="ChickenAndSandwichTitle">
+            <div class="pusher" style="float: left">
+                <p style="font-size:40px;">Chicken And Sandwichs</p>
+            </div>
+        </div>
+
+        <div class="spliter"></div>
+
+        <button id="BSBCC" onclick="BSBCC(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Bacon Smokehouse Buttermilk Crispy Chicken-6$</font>
+        </button>
+
+        <div class="spliter2" style="float: left"></div>
+
+        <button id="BSAGC" onclick="BSAGC(); PriceCheck(COSTotal,BurgerTotal)" style="float: left;background-color: white">
+            <font size="4">Bacon Smokehouse Artisan Grilled Chicken-7$</font>
+        </button>
+
+        <div class="spliter2" style="float: left;"></div>
+
+        <button id="4PieceChickenMcNuggets" onclick="FourPieceChickenMcNuggets(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">4 piece Chicken McNuggets-5$</font>
+        </button>
+
+        <div class="spliter2" style="float: left;"></div>
+
+        <br>
+        <br>
+
+        <div class="divider"></div>
+
+        <button id="ButtermilkCrispyTenders" onclick="ButtermilkCrispyTenders(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Buttermilk Crispy Tenders-6$</font>
+        </button>
+
+        <div class="spliter2" style="float: left;"></div>
+
+        <button id="ClassicChickenSandwich" onclick="ClassicChickenSandwich(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Classic Chicken Sandwich-4$</font>
+        </button>
+
+        <div class="spliter2" style="float: left;"></div>
+
+        <button id="AGCS" onclick="AGCS(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Artisan Grilled Chicken Sandwich-5$</font>
+        </button>
+
+        <div class="spliter2" style="float: left;"></div>
+
+        <button id="BCCS" onclick="BCCS(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Buttermilk Crispy Chicken Sandwich-6$</font>
+        </button>
+
+        <div class="spliter2"></div>
+
+        <br>
+        <br>
+
+        <div class="divider"></div>
+
+        <button id="McChicken" onclick="McChicken(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">McChicken-4$</font>
+        </button>
+
+        <div class="spliter2" style="float: left;"></div>
+
+        <button id="FiletOFish" onclick="FiletOFish(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Filet-O-Fish-5$</font>
+        </button>
+
+        <div class="spliter2" style="float: left;"></div>
+
+        <button id="BRSBCC" onclick="BRSBCC(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Bacon Ranch Salad with Buttermilk Crispy Chicken-2$</font>
+        </button>
+
+        <div class="spliter2" style="float: left;"></div>
+
+        <button id="BRGCS" onclick="BRGCS(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Bacon Ranch Grilled Chicken Salad-2$</font>
+        </button>
+
+        <div class="spliter2" style="float: left"></div>
+
+        <br>
+        <br>
+
+        <div class="divider"></div>
+
+        <button id="SBCCS" onclick="SBCCS(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Southwest Buttermilk Crispy Chicken Salad-3$</font>
+        </button>
+
+        <div class="spliter2" style="float:left"></div>
+
+        <button id="SNSHBGT" onclick="SNSHBGT(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">Sweet N' Spicy Honey BBQ Glazed Tenders-5$</font>
+        </button>
+
+        <div class="spliter2" style="float:left"></div>
+
+        <button id="McRib" onclick="McRib(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white">
+            <font size="4">McRib-7$</font>
+        </button>
+    </div>
+    
+    <div class="divspliter"></div>
+    
+    <div class="BurgerBox">
+        <div class="BurgerTitle">
+            <div class="pusher" style="float: left;">
+                <p style="font-size:40px;">Burgers</p>
+            </div>
+        </div>
+            
+            <div class="spliter"></div>
+            
+            <button id="BaconSmokehouseBurger" onclick="BaconSmokehouseBurger(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">Bacon Smokehouse Burger-4$</font></button>
+            
+            <div class="spliter2" style="float: left"></div>
+            
+            <button id="DoubleBaconSmokehouseBurger" onclick=" DoubleBaconSmokehouseBurger(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white;"><font size="4">Double Bacon Smokehouse Burger-5$</font></button>
+            
+            <div class="spliter2" style="float: left;"></div>
+            
+            <button style="float: left; background-color: white"><font size="4">Cheeseburger-1$</font></button>
+            
+            <div class="spliter2" style="float: left;"></div>
+            
+            <button id="BigMac" onclick="BigMac(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white;"><font size="4">Big Mac-3$</font></button>
+            
+            <br>
+            <br>
+            
+            <div class="divider"></div>
+            
+            <button id="BigMac" onclick="QuarterPounderWithCheese(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white;"><font size="4">Quarter Pounder With Cheese-5$</font></button>
+            
+            <div class="spliter2" style="float: left;"></div>
+            
+            <button id="DoubleQuarterPounderWithCheese" onclick="DoubleQuarterPounderWithCheese(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color: white;"><font size="4">Double Quarter Pounder With Cheese-7$</font></button>
+            
+            <div class="spliter2" style="float: left"></div>
+            
+            <button id="TripleCheeseburger" onclick="TripleCheeseburger(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">Triple Cheeseburger-2$</font></button>
+            
+            <div class="spliter2" style="float: left"></div>
+            
+            <button id="McDouble" onclick="McDouble(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">McDouble-3$</font></button>
+            
+            <br>
+            <br>
+            
+            <div class="divider"></div>
+            
+            <button id="BaconMcDouble" onclick="BaconMcDouble(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">Bacon McDouble-4$</font></button>
+            
+            <div class="spliter2" style="float: left"></div>
+            
+            <button id="Hamburger" onclick="Hamburger(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">Hamburger-1$</font></button>
+    </div>
+    
+    <div class="SaladBox">
+        <div class="SaladTitle">
+            <div class="pusher" style="float: left;">
+                <p style="font-size:40px;">Salads</p>
+            </div>
+        </div>
+        
+        <div class="spliter"></div>
+        
+        <button id="BaconRanchSaladwithButtermilkCrispyChicken" onclick="BaconRanchSaladwithButtermilkCrispyChicken(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">Bacon Ranch Salad With Buttermilk Crispy Chicken-2$</font></button>
+        
+        <div class="spliter2" style="float: left"></div>
+    
+        <button id="BaconRanchGrilledChickenSalad" onclick="BaconRanchGrilledChickenSalad(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">Bacon Ranch Grilled Chicken Salad-2$</font></button>
+        
+        <div class="spliter2" style="float: left"></div>
+        
+        <button id="SouthwestButtermilkCrispyChickenSalad" onclick="SouthwestButtermilkCrispyChickenSalad(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">Southwest Buttermilk Crispy Chicken Salad-3$</font></button>
+        
+        <br>
+        <br>
+        
+        <div class="divider"></div>
+        
+        <button id="SouthwestGrilledChickenSalad" onclick="SouthwestGrilledChickenSalad(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">Southwest Grilled Chicken Salad-4$</font></button>
+        
+        <div class="spliter2" style="float: left"></div>
+        
+        <button id="SideSalad" onclick="SideSalad(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">Side Salad-1$ </font></button>
+    </div>
+    
+    <div class="SnacksAndSides">
+        <div class="SnacksAndSidesTitle">
+            <div class="pusher" style="float: left;">
+                <p style="font-size:40px;">Snacks And Sides</p>
+            </div>
+        </div>
+            
+            <div class="spliter"></div>
+            
+            <button id="WorldFamousFries" onclick="WorldFamousFries(); PriceCheck(COSTotal,BurgerTotal)" style="float: left; background-color:white;"><font size="4">World Famous Fries-1$</font></button>
+            
+            <div class="spliter2" style="float: left"></div>
+    </div>
+    
+    <div class="PriceTitle" style="font-size:40px">Price:</div>
+    
+    <input style="font-size: 40px; width: 85px; background-color: white" disabled id="TotalPrice">
+    
+    <div class="Dollar">$</div>
+    
+    <p id="ItemsOrdered">Items Ordered</p>
+    
+    <p id="BSBCCOrdered"></p>
+    
+    <p id="BSAGCOrdered"></p>
+    
+    <p id="FourPieceChickenMcNuggetsOrdered"></p>
+    
+    <p id="ButtermilkCrispyTendersOrdered"></p>
+    
+    <p id="ClassicChickenSandwichOrdered"></p>
+    
+    <p id="AGCSOrdered"></p>
+    
+    <p id="BCCSOrdered"></p>
+    
+    <p id="McChickenOrdered"></p>
+    
+    <p id="FiletOFishOrdered"></p>
+    
+    <p id="BRSBCCOrdered"></p>
+    
+    <p id="BRGCSOrdered"></p>
+    
+    <p id="SBCCSOrdered"></p>
+    
+    <p id="SNSHBGTOrdered"></p>
+    
+    <p id="McRibOrdered"></p>
+    
+    <p id="BaconSmokehouseBurgerOrdered"></p>
+    
+    <p id="DoubleBaconSmokehouseBurgerOrdered"></p>
+    
+    <p id="BigMacOrdered"></p>
+    
+    <p id="QuarterPounderWithCheeseOrdered"></p>
+    
+    <p id="DoubleQuarterPounderWithCheeseOrdered"></p>
+    
+    <p id="TripleCheeseburgerOrdered"></p>
+    
+    <p id="McDoubleOrdered"></p>
+    
+    <p id="BaconMcDoubleOrdered"></p>
+    
+    <p id="HamburgerOrdered"></p>
+    
+    <p id="BaconRanchSaladwithButtermilkCrispyChickenOrdered"></p>
+    
+    <p id="BaconRanchGrilledChickenSaladOrdered"></p>
+    
+    <p id="SouthwestButtermilkCrispyChickenSaladOrdered"></p>
+    
+    <p id="SouthwestGrilledChickenSaladOrdered"></p>
+    
+    <p id="SideSaladOrdered"></p>
+    
+    <p id="WorldFamousFriesOrdered"></p>
+    
+</center>
+
+<style>
+    .SnacksAndSidesTitle{
+        background-color: lightgrey;
+        width: 1200px;
+        height: 0px;
+        border: 25px;
+        margin: 10px;
+        position: absolute;
+        top: 930px;
+    }
+    
+    .SnacksAndSides {
+        background-color: lightgray;
+        width: 1300px;
+        height: 130px;
+        border: 25px solid black;
+        padding: 25px;
+        margin: 25px;
+    }
+    
+    .SaladTitle {
+        background-color: lightgrey;
+        width: 1200px;
+        height: 0px;
+        border: 25px;
+        margin: 10px;
+        position: absolute;
+        top: 680px;
+    }
+    
+    .SaladBox {
+        background-color: lightgray;
+        width: 1300px;
+        height: 130px;
+        border: 25px solid black;
+        padding: 25px;
+        margin: 25px;
+    }
+    
+    .Dollar {
+        display: inline;
+        font-size: 40px
+    }
+    
+    .spliter3 {
+        width: 1px;
+        height: 105px;
+        display: block;
+    }
+    
+    .BurgerTitle {
+         background-color: lightgrey;
+        width: 1200px;
+        height: 0px;
+        border: 25px;
+        margin: 10px;
+        position: absolute;
+        top: 360px;
+    }
+    
+    .BurgerBox {
+         background-color: lightgray;
+        width: 1300px;
+        height: 185px;
+        border: 25px solid black;
+        padding: 25px;
+        margin: 25px;
+    }
+    
+    .divspliter {
+        height: 0px
+    }
+    
+    .PriceTitle {
+        display: inline;
+    }
+    
+    .pusher {
+        display: inline-block;
+        height: 1px;
+        width: 1270px;
+    }
+
+    .divider2 {
+        display: inline;
+        height: 60px;
+        background-color: black
+    }
+
+    .divider {
+        display: block;
+        height: 10px;
+        width: 100px;
+    }
+
+    .spliter {
+        height: 50px
+    }
+
+    .spliter2 {
+        width: 30px;
+        height: 1px;
+        display: inline-block;
+    }
+
+    .ChickenAndSandwichBox {
+        background-color: lightgray;
+        width: 1300px;
+        height: 230px;
+        border: 25px solid black;
+        padding: 25px;
+        margin: 25px;
+    }
+
+    .ChickenAndSandwichTitle {
+        background-color: lightgrey;
+        width: 1200px;
+        height: 0px;
+        border: 25px;
+        margin: 10px;
+        position: absolute;
+        top: 6px;
+    }
+
+</style>
+
+<script>
+    var BurgerTotal = 0;
+    var DrinkTotal = 0;
+    var COSTotal = 0;
+    var BSBCCOrdered = 0;
+    var BSAGCOrdered = 0;
+    var FourPieceChickenMcNuggetsOrdered = 0;
+    var ButtermilkCrispyTendersOrdered = 0;
+    var ClassicChickenSandwichOrdered = 0;
+    var AGCSOrdered = 0;
+    var BCCSOrdered = 0;
+    var McChickenOrdered = 0;
+    var FiletOFishOrdered = 0;
+    var BRSBCCOrdered = 0;
+    var BRGCSOrdered = 0;
+    var SBCCSOrdered = 0;
+    var SNSHBGTOrdered = 0;
+    var McRibOrdered = 0;
+    var BaconSmokehouseBurgerOrdered = 0;
+    var DoubleBaconSmokehouseBurgerOrdered = 0;
+    var BigMacOrdered = 0;
+    var QuarterPounderWithCheeseOrdered = 0;
+    var DoubleQuarterPounderWithCheeseOrdered = 0;
+    var TripleCheeseburgerOrdered = 0;
+    var McDoubleOrdered = 0;
+    var BaconMcDoubleOrdered = 0;
+    var HamburgerOrdered = 0;
+    var BaconRanchSaladwithButtermilkCrispyChickenOrdered = 0;
+    var BaconRanchGrilledChickenSaladOrdered = 0;
+    var SouthwestButtermilkCrispyChickenSaladOrdered = 0;
+    var SouthwestGrilledChickenSaladOrdered = 0;
+    var SideSaladOrdered = 0;
+    var WorldFamousFriesOrdered = 0;
+    
+    function Load() {
+        BurgerTotal = 0;
+        DrinkTotal = 0;
+        COSTotal = 0;
+        
+        document.getElementById("TotalPrice").value = 0
+        
+        console.log(COSTotal)
+    }
+    
+    function WorldFamousFries() {
+        if (document.getElementById("WorldFamousFries").onclick) {
+            COSTotal += 1
+            WorldFamousFriesOrdered += 1
+            
+            document.getElementById("WorldFamousFriesOrdered").innerHTML = "World Famous Fries " + "* " + WorldFamousFriesOrdered
+        }
+    }
+    
+    function SideSalad() {
+        if (document.getElementById("SideSalad").onclick) {
+            COSTotal += 1
+            SideSaladOrdered += 1
+            
+            document.getElementById("SideSaladOrdered").innerHTML = "Side Salad " + "* " + SideSaladOrdered
+        }
+    }
+    
+    function SouthwestGrilledChickenSalad() {
+        if (document.getElementById("SouthwestGrilledChickenSalad").onclick) {
+            COSTotal += 4
+            SouthwestGrilledChickenSaladOrdered += 1
+            
+            document.getElementById("SouthwestGrilledChickenSaladOrdered").innerHTML = "Southwest Grilled Chicken Salad " + "* " + SouthwestGrilledChickenSaladOrdered
+        }
+    }
+    
+    function SouthwestButtermilkCrispyChickenSalad() {
+        if (document.getElementById("BaconRanchGrilledChickenSalad").onclick) {
+            COSTotal += 3
+            SouthwestButtermilkCrispyChickenSaladOrdered += 1
+            
+            document.getElementById("SouthwestButtermilkCrispyChickenSaladOrdered").innerHTML = "Southwest Buttermilk Crispy Chicken Salad " + "* " + SouthwestButtermilkCrispyChickenSaladOrdered
+        }
+    }
+    
+    function BaconRanchGrilledChickenSalad() {
+        if (document.getElementById("BaconRanchGrilledChickenSalad").onclick) {
+            COSTotal += 2
+            BaconRanchGrilledChickenSaladOrdered += 1
+            
+            document.getElementById("BaconRanchGrilledChickenSaladOrdered").innerHTML = "Bacon Ranch Grilled Chicken Salad " + "* " + BaconRanchGrilledChickenSaladOrdered
+        }
+    }
+    
+    function BaconRanchSaladwithButtermilkCrispyChicken() {
+        if (document.getElementById("BaconRanchSaladwithButtermilkCrispyChicken").onclick) {
+            COSTotal += 2
+            BaconRanchSaladwithButtermilkCrispyChickenOrdered += 1
+            
+            document.getElementById("BaconRanchSaladwithButtermilkCrispyChickenOrdered").innerHTML = "Bacon Ranch Salad With Buttermilk Crispy Chicken " + "* " + BaconRanchSaladwithButtermilkCrispyChickenOrdered
+        }
+    }
+    
+    function Hamburger() {
+        if (document.getElementById("Hamburger").onclick) {
+            COSTotal += 1
+            HamburgerOrdered += 1
+            
+            document.getElementById("HamburgerOrdered").innerHTML = "Hamburger " + "* " + HamburgerOrdered
+        }
+    }
+    
+    function BaconMcDouble() {
+        if (document.getElementById("BaconMcDouble").onclick) {
+            COSTotal += 4
+            BaconMcDoubleOrdered += 1
+            
+            document.getElementById("BaconMcDoubleOrdered").innerHTML = "Bacon McDouble " + "* " + BaconMcDoubleOrdered
+        }
+    }
+    
+    function McDouble() {
+        if (document.getElementById("McDouble").onclick) {
+            COSTotal += 3
+            McDoubleOrdered += 1
+            
+            document.getElementById("McDoubleOrdered").innerHTML = "McDouble " + "* " + McDoubleOrdered
+        }
+    }
+
+    function BaconSmokehouseBurger() {
+        if (document.getElementById("BaconSmokehouseBurger").onclick) {
+            COSTotal += 4
+            BaconSmokehouseBurgerOrdered += 1
+            
+            document.getElementById("BaconSmokehouseBurgerOrdered").innerHTML = "Bacon Smokehouse Burger " + "* " + BaconSmokehouseBurgerOrdered
+        }
+    }
+    
+    function DoubleBaconSmokehouseBurger() {
+        if (document.getElementById("DoubleBaconSmokehouseBurger").onclick) {
+            COSTotal += 5
+            DoubleBaconSmokehouseBurgerOrdered += 1
+            
+            document.getElementById("DoubleBaconSmokehouseBurgerOrdered").innerHTML = "Double Bacon Smokehouse Burger " + "* " + DoubleBaconSmokehouseBurgerOrdered
+        }
+ 
+    }
+    
+    function BigMac() {
+        COSTotal += 3
+        BigMacOrdered += 1
+        
+        document.getElementById("BigMacOrdered").innerHTML = "Big Mac " + "* " + BigMacOrdered
+    }
+    
+    function QuarterPounderWithCheese() {
+        COSTotal += 5
+        QuarterPounderWithCheeseOrdered += 1
+        
+        document.getElementById("QuarterPounderWithCheeseOrdered").innerHTML = "Quarter Pounder With Cheese " + "* " + QuarterPounderWithCheeseOrdered
+    }
+    
+    function DoubleQuarterPounderWithCheese() {
+        COSTotal += 7
+        DoubleQuarterPounderWithCheeseOrdered += 1
+
+        document.getElementById("DoubleQuarterPounderWithCheeseOrdered").innerHTML = "Double Quarter Pounder With Cheese " + "* " + DoubleQuarterPounderWithCheeseOrdered
+    }
+    
+    function TripleCheeseburger() {
+            COSTotal += 2
+            TripleCheeseburgerOrdered += 1
+            
+            document.getElementById("TripleCheeseburgerOrdered").innerHTML = "Triple Cheeseburger " + "* " + TripleCheeseburgerOrdered
+        }
+    
+    function BSBCC() {
+        if (document.getElementById("BSBCC").onclick) {
+            COSTotal += 6
+            BSBCCOrdered += 1
+        }
+        
+        document.getElementById("BSBCCOrdered").innerHTML = "Bacon Smokehouse Buttermilk Crispy Chicken " + "* " + BSBCCOrdered
+
+    }
+    
+    function BSAGC() {
+        if (document.getElementById("BSAGC").onclick) {
+            COSTotal += 7
+            BSAGCOrdered += 1
+        }
+        
+        document.getElementById("BSAGCOrdered").innerHTML = "Bacon Smokehouse Artisan Grilled Chicken * " + BSAGCOrdered
+    }
+    
+    function FourPieceChickenMcNuggets() {
+        if (document.getElementById("4PieceChickenMcNuggets").onclick) {
+            COSTotal += 5
+            FourPieceChickenMcNuggetsOrdered += 1
+            document.getElementById("FourPieceChickenMcNuggetsOrdered").innerHTML = "Four Piece Chicken McNuggets * " + FourPieceChickenMcNuggetsOrdered
+        }
+    }
+    
+    function ButtermilkCrispyTenders() {
+        if (document.getElementById("ButtermilkCrispyTenders").onclick) {
+            COSTotal += 6
+            ButtermilkCrispyTendersOrdered += 1
+            
+            document.getElementById("ButtermilkCrispyTendersOrdered").innerHTML = "Buttermilk Crispy Tenders * " + ButtermilkCrispyTendersOrdered
+        }
+    }
+    
+    function ClassicChickenSandwich() {
+        if (document.getElementById("ClassicChickenSandwich").onclick) {
+            COSTotal += 4
+            ClassicChickenSandwichOrdered += 1
+            
+            document.getElementById("ClassicChickenSandwichOrdered").innerHTML = "Classic Chicken Sandwich * " + ClassicChickenSandwichOrdered
+        }
+    }
+    
+    function AGCS() {
+        if (document.getElementById("AGCS").onclick) {
+            COSTotal += 5
+            AGCSOrdered += 1
+            
+            document.getElementById("AGCSOrdered").innerHTML = "Artisan Grilled Chicken Sandwich * " + AGCSOrdered
+        }
+    }
+    
+    function BCCS() {
+        if (document.getElementById("BCCS").onclick) {
+            COSTotal += 6
+            BCCSOrdered += 1
+            
+            document.getElementById("BCCSOrdered").innerHTML = "Buttermilk Crispy Chicken Sandwich * " + BCCSOrdered
+        }
+    }
+    
+    function McChicken() {
+        if (document.getElementById("McChicken").onclick) {
+            COSTotal += 4
+            McChickenOrdered += 1
+            
+            document.getElementById("McChickenOrdered").innerHTML = "McChicken * " + McChickenOrdered
+        }
+    }
+    
+    function FiletOFish() {
+        if (document.getElementById("FiletOFish").onclick) {
+            COSTotal += 5
+            FiletOFishOrdered += 1
+            
+            document.getElementById("FiletOFishOrdered").innerHTML = "Filet Of Fish * " + FiletOFishOrdered
+        }
+    }
+    
+    function BRSBCC() {
+        if (document.getElementById("BRSBCC").onclick) {
+            COSTotal += 2
+            BRSBCCOrdered += 1
+            
+            document.getElementById("BRSBCCOrdered").innerHTML = "Bacon Ranch Salad with Buttermilk Crispy Chicken * " + BRSBCCOrdered
+
+        }
+    }
+    
+    function BRGCS() {
+        if (document.getElementById("BRGCS").onclick) {
+            COSTotal += 2
+            BRGCSOrdered += 1
+            
+            document.getElementById("BRGCSOrdered").innerHTML = "Bacon Ranch Grilled Chicken Salad * " + BRGCSOrdered
+        }
+    }
+    
+    function SBCCS() {
+        if (document.getElementById("SBCCS").onclick) {
+            COSTotal += 3
+            SBCCSOrdered += 1
+            
+            document.getElementById("SBCCSOrdered").innerHTML = "Southwest Buttermilk Crispy Chicken Salad * " + SBCCSOrdered
+        }
+    }
+    
+    function SNSHBGT() {
+        if (document.getElementById("SNSHBGT").onclick) {
+            COSTotal += 5
+            SNSHBGTOrdered += 1
+            
+            document.getElementById("SNSHBGTOrdered").innerHTML = "Sweet N' Spicy Honey BBQ Glazed Tenders * " + SNSHBGTOrdered
+        }
+    }
+    
+    function McRib() {
+        if (document.getElementById("McRib").onclick) {
+            COSTotal += 7
+            McRibOrdered += 1
+            
+            document.getElementById("McRibOrdered").innerHTML = "McRib * " + McRibOrdered
+        }
+    }
+
+    function PriceCheck(COSTotal) {
+        console.log("COSTotal",COSTotal)
+        
+        var TotalTextBox = document.getElementById("TotalPrice")
+        
+        TotalTextBox.value = COSTotal;
+    }
+</script>
+
+</html>

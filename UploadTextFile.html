@@ -1,0 +1,19 @@
+<html>
+
+    <body>
+        <input type="file" id="openFile" />
+        <br>
+        <textarea id="text"></textarea>
+    </body>
+    
+    <script>
+        document.getElementById("openFile").addEventListener("change", function() {
+              var fr = new FileReader();
+              fr.onload = function() {
+                  document.getElementById("text").textContent = this.result;
+              }
+              fr.readAsText(this.files[0]);
+        })
+    </script>
+    
+</html>
